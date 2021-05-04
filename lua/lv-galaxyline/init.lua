@@ -24,6 +24,8 @@ local colors = {
 local condition = require('galaxyline.condition')
 local gls = gl.section
 gl.short_line_list = {'NvimTree', 'vista', 'dbui', 'packer'}
+vim.o.tabstop = 2
+vim.o.shiftwidth = 2
 
 gls.left[1] = {
     ViMode = {

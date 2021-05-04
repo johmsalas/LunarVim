@@ -42,9 +42,12 @@ O.lua.formatter = 'lua-format'
 O.lua.autoformat = false
 
 -- javascript
+local indent = 2
 O.tsserver.formatter = 'prettier'
-O.tsserver.linter = nil
+O.tsserver.linter = true
 O.tsserver.autoformat = true
+O.tsserver.tabstop = indent
+O.tsserver.shiftwidth = indent
 
 -- json
 O.json.autoformat = true
