@@ -34,6 +34,9 @@ O.python.autoformat = true
 O.python.diagnostics.virtual_text = true
 O.python.diagnostics.signs = true
 O.python.diagnostics.underline = true
+O.python.analysis.type_checking = "off"
+O.python.analysis.auto_search_paths = true
+O.python.analysis.use_library_code_types = true
 
 -- lua
 -- TODO look into stylua
@@ -42,9 +45,12 @@ O.lua.formatter = 'lua-format'
 O.lua.autoformat = false
 
 -- javascript
+local indent = 2
 O.tsserver.formatter = 'prettier'
-O.tsserver.linter = nil
+O.tsserver.linter = true
 O.tsserver.autoformat = true
+O.tsserver.tabstop = indent
+O.tsserver.shiftwidth = indent
 
 -- json
 O.json.autoformat = true
