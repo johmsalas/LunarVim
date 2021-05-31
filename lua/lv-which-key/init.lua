@@ -74,6 +74,10 @@ local mappings = {
     ["e"] = "Explorer",
     ["f"] = "Find File",
     ["h"] = "No Highlight",
+    b = {
+        name = "+Buffer",
+        n = {"<cmd>tabnew<cr>", "Open empty buffer"}
+    },
     d = {
         name = "+Debug",
         b = {"<cmd>DebugToggleBreakpoint<cr>", "Toggle Breakpoint"},

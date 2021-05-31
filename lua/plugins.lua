@@ -58,6 +58,15 @@ return require("packer").startup(
         use {"nvim-treesitter/nvim-treesitter", run = ":TSUpdate"}
         use {"windwp/nvim-ts-autotag", opt = true}
 
+				-- Vim motions
+        use {"wellle/targets.vim", opt = false}
+        use {"chaoren/vim-wordmotion", opt = false}
+
+				-- Projectionist
+				use {'tpope/vim-projectionist', opt = true}
+
+				use {"machakann/vim-sandwich", opt = false}
+
         -- Explorer
         use "kyazdani42/nvim-tree.lua"
         -- TODO remove when open on dir is supported by nvimtree
@@ -74,6 +83,14 @@ return require("packer").startup(
 
         -- Color
         use {"christianchiarulli/nvcode-color-schemes.vim", opt = true}
+
+        -- Ctags / Symbols
+        use {"simrat39/symbols-outline.nvim", opt = true}
+
+				-- Git
+				use {"tpope/vim-fugitive", opt = false }
+				use {"airblade/vim-gitgutter", opt = false }
+				use {"jreybert/vimagit", opt = false }
 
         -- Icons
         use {"kyazdani42/nvim-web-devicons", opt = true}
@@ -95,6 +112,7 @@ return require("packer").startup(
         require_plugin("nvim-treesitter")
         require_plugin("nvim-ts-autotag")
         require_plugin("nvim-tree.lua")
+        require_plugin("symbols-outline.nvim")
         require_plugin("gitsigns.nvim")
         require_plugin("which-key.nvim")
         require_plugin("dashboard-nvim")
@@ -105,5 +123,12 @@ return require("packer").startup(
         require_plugin("nvim-web-devicons")
         require_plugin("galaxyline.nvim")
         require_plugin("barbar.nvim")
+        require_plugin("welle/targets.vim")
+        require_plugin("chaoren/vim-wordmotion")
+				require_plugin("machakann/vim-sandwich")
+				require_plugin("tpope/vim-projectionist")
+				require_plugin("tpope/vim-fugitive")
+				require_plugin("airblade/vim-gitgutter")
+				require_plugin("jreybert/vimagit")
     end
 )
