@@ -98,6 +98,7 @@ return require("packer").startup(function(use)
     use {"tpope/vim-fugitive", opt = false }
     use {"airblade/vim-gitgutter", opt = false }
     use {"jreybert/vimagit", opt = false }
+    use {"kosayoda/nvim-lightbulb", opt = false }
 
     require_plugin("nvim-lspconfig")
     require_plugin("lspsaga.nvim")
@@ -131,14 +132,15 @@ return require("packer").startup(function(use)
     require_plugin("nvim-ts-context-commentstring")
     
     -- custom
-    use {"wellle/targets.vim", opt = false}
-    use {"chaoren/vim-wordmotion", opt = false}
-    use {'tpope/vim-projectionist', opt = true}
-    use {"machakann/vim-sandwich", opt = false}
-    use {"simrat39/symbols-outline.nvim", opt = true}
-    use {"tpope/vim-fugitive", opt = false }
-    use {"airblade/vim-gitgutter", opt = false }
-    use {"jreybert/vimagit", opt = false }
+    require_plugin("wellle/targets.vim")
+    require_plugin("chaoren/vim-wordmotion")
+    require_plugin('tpope/vim-projectionist')
+    require_plugin("machakann/vim-sandwich")
+    require_plugin("simrat39/symbols-outline.nvim")
+    require_plugin("tpope/vim-fugitive")
+    require_plugin("airblade/vim-gitgutter")
+    require_plugin("jreybert/vimagit")
+    require_plugin("kosayoda/nvim-lightbulb")
 
     -- Extras
     if O.extras then
