@@ -21,7 +21,6 @@ require('lv-matchup')
 require('lv-autopairs')
 require('lv-rnvimr')
 require('lv-which-key')
-require('lv-symbols-outline')
 require('lv-lsp-rooter')
 require('lv-zen')
 
