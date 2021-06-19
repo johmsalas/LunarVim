@@ -54,7 +54,7 @@ O.lua.autoformat = false
 -- javascript
 local indent = 2
 O.tsserver.formatter = 'prettier'
-O.tsserver.linter = true
+O.tsserver.linter = 'eslint'
 O.tsserver.autoformat = true
 O.tsserver.tabstop = indent
 O.tsserver.shiftwidth = indent

@@ -23,6 +23,8 @@ require('lv-rnvimr')
 require('lv-which-key')
 require('lv-lsp-rooter')
 require('lv-zen')
+-- require('lv-neuron')
+require('lv-treesittertextobjects')
 
 -- extras
 if O.extras then
@@ -69,3 +71,22 @@ require('lsp.vim-ls')
 require('lsp.vue-ls')
 require('lsp.yaml-ls')
 require('lsp.elixir-ls')
+
+-- Lesson 1
+-- local api = vim.api
+-- function appendToLine()
+--   local line = api.nvim_get_current_line()
+--   local length = string.len(line)
+--   local lastChar = string.sub(line, length)
+--   local pos = api.nvim_win_get_cursor(0)
+--   if lastChar == ";" then
+--     pos[2] = length
+--     api.nvim_win_set_cursor(0, pos)
+--     api.nvim_command('startinsert')
+--   else
+--     api.nvim_command('startinsert!')
+--   end
+--   api.nvim_command('silent! call repeat#set(":lua appendToLine()\\<CR>", -1)')
+-- end
+
+

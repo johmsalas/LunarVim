@@ -8,7 +8,7 @@ if fn.empty(fn.glob(install_path)) > 0 then
     execute "packadd packer.nvim"
 end
 
---- Check if a file or directory exists in this path
+--- check if a file or directory exists in this path
 local function require_plugin(plugin)
     local plugin_prefix = fn.stdpath("data") .. "/site/pack/packer/opt/"
 
@@ -17,7 +17,7 @@ local function require_plugin(plugin)
     local ok, err, code = os.rename(plugin_path, plugin_path)
     if not ok then
         if code == 13 then
-            -- Permission denied, but it exists
+            -- permission denied, but it exists
             return true
         end
     end
@@ -26,34 +26,34 @@ local function require_plugin(plugin)
     return ok, err, code
 end
 
-vim.cmd "autocmd BufWritePost plugins.lua PackerCompile" -- Auto compile when there are changes in plugins.lua
+vim.cmd "autocmd bufwritepost plugins.lua packercompile" -- auto compile when there are changes in plugins.lua
 
 return require("packer").startup(function(use)
-    -- Packer can manage itself as an optional plugin
+    -- packer can manage itself as an optional plugin
     use "wbthomason/packer.nvim"
 
-    -- TODO refactor all of this (for now it works, but yes I know it could be wrapped in a simpler function)
+    -- todo refactor all of this (for now it works, but yes i know it could be wrapped in a simpler function)
     use {"neovim/nvim-lspconfig", opt = true}
     use {"glepnir/lspsaga.nvim", opt = true}
     use {"kabouzeid/nvim-lspinstall", opt = true}
     use {"folke/trouble.nvim", opt = true}
 
-    -- Telescope
+    -- telescope
     use {"nvim-lua/popup.nvim", opt = true}
     use {"nvim-lua/plenary.nvim", opt = true}
     use {"nvim-telescope/telescope.nvim", opt = true}
     use {"nvim-telescope/telescope-fzy-native.nvim", opt = true}
     use {"nvim-telescope/telescope-project.nvim", opt = true}
 
-    -- Debugging
+    -- debugging
     use {"mfussenegger/nvim-dap", opt = true}
 
-    -- Autocomplete
+    -- autocomplete
     use {"hrsh7th/nvim-compe", opt = true}
     use {"hrsh7th/vim-vsnip", opt = true}
     use {"rafamadriz/friendly-snippets", opt = true}
 
-    -- Treesitter
+    -- treesitter
     use {"nvim-treesitter/nvim-treesitter", run = ":TSUpdate"}
     use {"windwp/nvim-ts-autotag", opt = true}
     use {'andymass/vim-matchup', opt = true}
@@ -98,6 +98,13 @@ return require("packer").startup(function(use)
     use {"airblade/vim-gitgutter", opt = false }
     use {"jreybert/vimagit", opt = false }
     use {"kosayoda/nvim-lightbulb", opt = false }
+    use {"jose-elias-alvarez/nvim-lsp-ts-utils", opt = false }
+    use {"nvim-treesitter/nvim-treesitter-textobjects", opt = false }
+    use {"tpope/vim-repeat", opt = false }
+    -- Neuron
+    -- use {"oberblastmeister/neuron.nvim", branch = "unstable" }
+    use {"junegunn/fzf.vim" }
+    use {"chiefnoah/neuron-v2.vim" }
 
     require_plugin("nvim-lspconfig")
     require_plugin("lspsaga.nvim")
@@ -129,7 +136,7 @@ return require("packer").startup(function(use)
     require_plugin('lsp-rooter.nvim')
     require_plugin("TrueZen.nvim")
     require_plugin("nvim-ts-context-commentstring")
-    
+
     -- custom
     require_plugin("wellle/targets.vim")
     require_plugin("chaoren/vim-wordmotion")
@@ -139,6 +146,12 @@ return require("packer").startup(function(use)
     require_plugin("airblade/vim-gitgutter")
     require_plugin("jreybert/vimagit")
     require_plugin("kosayoda/nvim-lightbulb")
+    -- require_plugin("oberblastmeister/neuron.nvim")
+    require_plugin("nvim-treesitter/nvim-treesitter-textobjects")
+    require_plugin("junegunn/fzf.vim")
+    require_plugin("chiefnoah/neuron-v2.vim")
+    require_plugin("tpope/vim-repeat")
+
 
     -- Extras
     if O.extras then

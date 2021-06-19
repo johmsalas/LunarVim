@@ -71,3 +71,7 @@ function! QuickFixToggle()
         cclose
     endif
 endfunction
+
+
+let g:wordmotion_uppercase_spaces = ['(', '[', ')', ']', '\w\ze"', '\w\ze''', '}', '<', '.']
+
