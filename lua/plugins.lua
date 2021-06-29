@@ -107,6 +107,8 @@ return require("packer").startup(function(use)
     use {"chiefnoah/neuron-v2.vim" }
 		-- Sane gx for netrw_gx bug
     use {"felipec/vim-sanegx"}
+    use {"mattn/emmet-vim"}
+    use {"mg979/vim-visual-multi"}
 
     require_plugin("nvim-lspconfig")
     require_plugin("lspsaga.nvim")
@@ -153,6 +155,8 @@ return require("packer").startup(function(use)
     require_plugin("junegunn/fzf.vim")
     require_plugin("chiefnoah/neuron-v2.vim")
     require_plugin("tpope/vim-repeat")
+    require_plugin("mattn/emmet-vim")
+    require_plugin("mg979/vim-visual-multi")
 
 
     -- Extras
@@ -169,8 +173,8 @@ return require("packer").startup(function(use)
         require_plugin('numb.nvim')
         use {'turbio/bracey.vim', run = 'npm install --prefix server', opt = true}
         require_plugin('bracey.vim')
-        use {'phaazon/hop.nvim', opt = true}
-        require_plugin('hop.nvim')
+        -- use {'phaazon/hop.nvim', opt = true}
+        -- require_plugin('hop.nvim')
         use {'norcalli/nvim-colorizer.lua', opt = true}
         require_plugin('nvim-colorizer.lua')
         use {'windwp/nvim-spectre', opt = true}
