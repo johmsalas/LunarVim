@@ -68,16 +68,6 @@ vim.cmd('vnoremap P "0P')
 -- Toggle the QuickFix window
 vim.api.nvim_set_keymap('', '<C-q>', ':call QuickFixToggle()<CR>', {noremap = true, silent = true})
 
-
--- vim.api.nvim_set_keymap('n', 'A', ":lua appendToLine()<CR>", {noremap = true, silent = true})
--- nvim-compe key map
-vim.cmd('inoremap <silent><expr> <C-Space> compe#complete()')
-vim.cmd("inoremap <silent><expr> <CR>      compe#confirm('<CR>')")
-vim.cmd("inoremap <silent><expr> <C-e>     compe#close('<C-e>')")
-vim.cmd("inoremap <silent><expr> <C-f>     compe#scroll({ 'delta': +4 })")
-vim.cmd("inoremap <silent><expr> <C-d>     compe#scroll({ 'delta': -4 })")
-
-
 -- Johmsalas custom
 vim.api.nvim_set_keymap('n', 'yiy', '^y$', {silent = true})
 
