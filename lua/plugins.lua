@@ -132,43 +132,103 @@ return require("packer").startup(function(use)
     use {"Pocco81/TrueZen.nvim", opt = true}
 
     -- Johmsalas
-    use {"wellle/targets.vim", opt = false}
-    use {"chaoren/vim-wordmotion", opt = false}
-    use {'tpope/vim-projectionist', opt = true}
-    use {"machakann/vim-sandwich", opt = false}
-    use {"tpope/vim-fugitive", opt = false }
-    use {"airblade/vim-gitgutter", opt = false }
-    use {"jreybert/vimagit", opt = false }
-    use {"kosayoda/nvim-lightbulb", opt = false }
-    use {"jose-elias-alvarez/nvim-lsp-ts-utils", opt = false }
-    use {"nvim-treesitter/nvim-treesitter-textobjects", opt = false }
-    use {"tpope/vim-repeat", opt = false }
+    -- Juse {"wellle/targets.vim", opt = false}
+    -- Juse {"chaoren/vim-wordmotion", opt = false}
+    -- Juse {'tpope/vim-projectionist', opt = true}
+    -- Juse {"machakann/vim-sandwich", opt = false}
+    -- Juse {"tpope/vim-fugitive", opt = false }
+    -- Juse {"airblade/vim-gitgutter", opt = false }
+    -- use {"jreybert/vimagit", opt = false }
+    -- use {"kosayoda/nvim-lightbulb", opt = false }
+    -- use {"jose-elias-alvarez/nvim-lsp-ts-utils", opt = false }
+    -- use {"nvim-treesitter/nvim-treesitter-textobjects", opt = false }
+    -- use {"tpope/vim-repeat", opt = false }
     -- Neuron
     -- use {"oberblastmeister/neuron.nvim", branch = "unstable" }
-    use {"junegunn/fzf.vim" }
-    use {"chiefnoah/neuron-v2.vim" }
+    -- use {"junegunn/fzf.vim" }
+    -- use {"chiefnoah/neuron-v2.vim" }
 		-- Sane gx for netrw_gx bug
-    use {"felipec/vim-sanegx"}
-    use {"mattn/emmet-vim"}
-    use {"mg979/vim-visual-multi"}
+    -- use {"felipec/vim-sanegx"}
+    -- use {"mattn/emmet-vim"}
+    -- use {"mg979/vim-visual-multi"}
 
 
     -- custom
-    require_plugin("wellle/targets.vim")
-    require_plugin("chaoren/vim-wordmotion")
-    require_plugin('tpope/vim-projectionist')
-    require_plugin("machakann/vim-sandwich")
-    require_plugin("tpope/vim-fugitive")
-    require_plugin("airblade/vim-gitgutter")
-    require_plugin("jreybert/vimagit")
-    require_plugin("kosayoda/nvim-lightbulb")
-    -- require_plugin("oberblastmeister/neuron.nvim")
-    require_plugin("nvim-treesitter/nvim-treesitter-textobjects")
-    require_plugin("junegunn/fzf.vim")
-    require_plugin("chiefnoah/neuron-v2.vim")
-    require_plugin("tpope/vim-repeat")
-    require_plugin("mattn/emmet-vim")
-    require_plugin("mg979/vim-visual-multi")
+    use {
+        "wellle/targets.vim",
+        opt = "BufRead",
+    }
+
+    use {
+        "chaoren/vim-wordmotion",
+        opt = "BufRead",
+    }
+
+    use {
+        'tpope/vim-projectionist',
+        opt = "BufRead",
+    }
+
+    use {
+        "machakann/vim-sandwich",
+        opt = "BufRead",
+    }
+
+    use {
+        "tpope/vim-fugitive",
+        opt = "BufRead",
+    }
+
+    use {
+        "airblade/vim-gitgutter",
+        opt = "BufRead",
+    }
+
+    use {
+        "jreybert/vimagit",
+        opt = "BufRead",
+    }
+
+    use {
+        "kosayoda/nvim-lightbulb",
+        opt = "BufRead",
+    }
+
+    -- use {
+    --     "oberblastmeister/neuron.nvim",
+    --     opt = "BufRead",
+    -- }
+
+    use {
+        "nvim-treesitter/nvim-treesitter-textobjects",
+        opt = "BufRead",
+    }
+
+    use {
+        "junegunn/fzf.vim",
+        opt = "BufRead",
+    }
+
+    use {
+        "chiefnoah/neuron-v2.vim",
+        opt = "BufRead",
+    }
+
+    use {
+        "tpope/vim-repeat",
+        opt = "BufRead",
+    }
+
+    use {
+        "mattn/emmet-vim",
+        opt = "BufRead",
+    }
+
+    use {
+        "mg979/vim-visual-multi",
+        opt = "BufRead",
+    }
+
 
     -- Zen Mode
     use {
