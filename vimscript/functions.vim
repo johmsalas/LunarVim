@@ -63,3 +63,15 @@ autocmd User GoyoLeave set laststatus=2
 
 " autocmd! User GoyoEnter lua require('galaxyline').disable_galaxyline()
 " autocmd! User GoyoLeave lua require('galaxyline').galaxyline_augroup()
+
+function! QuickFixToggle()
+    if empty(filter(getwininfo(), 'v:val.quickfix'))
+        copen
+    else
+        cclose
+    endif
+endfunction
+
+
+let g:wordmotion_uppercase_spaces = ['(', '[', ')', ']', '\w\ze"', '\w\ze''', '}', '<', '.']
+

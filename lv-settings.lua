@@ -12,6 +12,13 @@ O.auto_complete = true
 O.colorscheme = 'lunar'
 O.auto_close_tree = 0
 O.wrap_lines = false
+O.timeoutlen = 100
+O.document_highlight = true
+O.extras = true
+
+-- dashboard
+-- O.dashboard.custom_header = {""}
+-- O.dashboard.footer = {""}
 
 -- if you don't want all the parsers change this to a table of the ones you want
 O.treesitter.ensure_installed = "all"
@@ -19,9 +26,9 @@ O.treesitter.ignore_install = {"haskell"}
 O.treesitter.highlight.enabled = true
 
 
-O.clang.diagnostics.virtual_text = false
-O.clang.diagnostics.signs = false
-O.clang.diagnostics.underline = false
+O.clang.diagnostics.virtual_text = true
+O.clang.diagnostics.signs = true
+O.clang.diagnostics.underline = true
 
 -- python
 -- add things like O.python.formatter.yapf.exec_path
@@ -47,7 +54,7 @@ O.lua.autoformat = false
 -- javascript
 local indent = 2
 O.tsserver.formatter = 'prettier'
-O.tsserver.linter = true
+O.tsserver.linter = 'eslint'
 O.tsserver.autoformat = true
 O.tsserver.tabstop = indent
 O.tsserver.shiftwidth = indent
@@ -57,4 +64,10 @@ O.json.autoformat = true
 
 -- ruby
 O.ruby.autoformat = true
+
+-- go
+O.go.autoformat = true
 -- create custom autocommand field (This would be easy with lua)
+
+-- Turn off relative_numbers
+-- O.relative_number = false
